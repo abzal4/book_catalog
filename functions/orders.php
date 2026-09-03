@@ -129,6 +129,21 @@ function get_all_amount($conn) {
     return $ordersAmount;
 }
 
+function get_order_items_from_order($conn, $orderId) {
+    $sql_books = "select book_id, quantity from order_items where order_id = $orderId";
+    $result = mysqli_query($conn, $sql_books);
+    if (!$result) {
+        error_log(mysqli_error($conn));
+        return false;
+    }
+    $order_items = [];
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $order_items[] = $row;
+    }
+    return $order_items;
+}
+
 function update_status($conn, $orderId, $status) {
     $sql = "update orders set status = '$status' where id = $orderId";
     $result = mysqli_query($conn, $sql  );

@@ -69,6 +69,18 @@ foreach ($cartBookIds as $bookId => $quantity) {
 </body>
 <script>
     $(document).ready(function () {
+        $(".cart_book").each(function () {
+            const bookId = $(this).attr("id");
+            const quantity = $(this).find(".book_quantity").text();
+
+            if (quantity == 1) {
+                $(this).find(".btn_amount_down").text("🗑️");
+            } else {
+                $(this).find(".btn_amount_down").text("-");
+            }
+        });
+
+        
         function updateCart(data) {
             const cart = data.cart;
             let totalPrice = 0;
@@ -77,7 +89,15 @@ foreach ($cartBookIds as $bookId => $quantity) {
                 const quantity = cart[bookId] ?? 0;
                 const price = parseInt($(this).find(".book_price").text(), 10);
                 const itemTotal = quantity * price;
-                $(this).find(".book_quantity").text(quantity);
+                if (quantity == 0) {
+                    $(this).hide();
+                } else if (quantity == 1) {
+                    $(this).find(".btn_amount_down").text('🗑️');
+                    $(this).find(".book_quantity").text(quantity);
+                } else {
+                    $(this).find(".btn_amount_down").text('-');
+                    $(this).find(".book_quantity").text(quantity);
+                }
                 $(this).find(".book_total_price").text(itemTotal);
                 totalPrice += itemTotal;
             });

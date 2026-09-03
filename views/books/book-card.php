@@ -10,6 +10,7 @@
                 <?= $book["genre"] ?> - <?= $book["author_name"] ?><br>
                 Подробнее
             </a>
+            <button type="button" id = <?= $book['id'] ?> class="button__add_cart">Добавить в корзину - <span><?= $_SESSION['cart'][$book['id']] ?? 0 ?></span>шт</button>
         </div>
     <?php endforeach; ?>
 </div>

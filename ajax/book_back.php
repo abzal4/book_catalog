@@ -20,10 +20,12 @@ if ($action === "addToCart") {
     if (!$_SESSION['cart']) {
         $_SESSION['cart']=[];
     }
+
     
     $currentAmount = $_SESSION['cart'][$bookId] ?? 0;
+    $newAmount = $currentAmount + 1;
 
-    $checkStock = BookController::checkStock($conn, $bookId, $currentAmount);
+    $checkStock = BookController::checkStock($conn, $bookId, $newAmount);
 
     if (!$checkStock['success']) {
         echo json_encode([
@@ -34,7 +36,7 @@ if ($action === "addToCart") {
         exit;
     }
 
-    $_SESSION['cart'][$bookId] = $currentAmount + 1;
+    $_SESSION['cart'][$bookId] = $newAmount;
     echo json_encode([
         'success' => true,
         'cart' => $_SESSION['cart']
@@ -57,7 +59,7 @@ if ($action === "removeFromCart") {
     }
     if (isset($_SESSION['cart'][$bookId])) {
         $_SESSION['cart'][$bookId]--;
-        if ($_SESSION['cart'][$bookId]==0) {
+        if ($_SESSION['cart'][$bookId] < 1) {
             unset($_SESSION['cart'][$bookId]);
         }
     }

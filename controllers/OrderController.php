@@ -148,15 +148,38 @@ class OrderController {
     public static function updateStatus ($conn, $orderId, $status) {
         
         $orderId = IdValidator::validateId($orderId);
-        $result = update_status($conn, $orderId, $status);
-        if (!$result) {
+
+        mysqli_begin_transaction($conn);
+        try {
+            
+            $order = get_order($conn, $orderId);
+            if (!$order) {
+                throw new Exception('Заказ не найден.');
+            }
+            if ($order['status'] !== 'new') {
+                throw new Exception('Статус этого заказа уже нельзя изменить.');
+            }
+            if ($status == 'cancelled') {
+                $order_items = get_order_items_from_order($conn, $orderId);
+                foreach ($order_items as $order_item) {
+                    update_stock($conn, $order_item['book_id'], $order_item['quantity']);
+                }
+            }
+            $result = update_status($conn, $orderId, $status);
+            if (!$result) {
+                throw new Exception('Не получилось изменить статус заказа.');
+            }
+            
+            mysqli_commit($conn);
+            return [
+                'success' => true
+            ];
+        } catch (Exception $e) {
+            mysqli_rollback($conn);
             return [
                 'success' => false,
-                'message' => 'Не получилось изменить статус заказа.'
+                'message' => $e->getMessage()
             ];
         }
-        return [
-            'success' => true
-        ];
     }
 }

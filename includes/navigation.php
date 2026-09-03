@@ -11,7 +11,7 @@
             </a> 
             <a class="favorites" href="/../favorites_books.php"> Избранные </a> 
             <a class="cart" href="/../cart.php"> Корзина </a> 
-            <a class="cart" href="/../orders.php"> Заказы </a> 
+            <a class="cart" href="/../orders.php"> Мои заказы </a> 
             <a class="admin" href="/../admin/admin.php" style="display: none;" > Админка </a>
             <a class="logout" href="/../logout.php"> Выйти из аккаунта  </a>
         </div>

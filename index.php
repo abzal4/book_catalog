@@ -109,6 +109,32 @@
             });
             
             loadBooks();
+
+            $("#result").on('click', ".button__add_cart", async function () {
+                const formData = new FormData;
+                formData.append('action' , 'addToCart');
+                formData.append('bookId' , $(this).attr('id'));
+                try {
+                    const response = await fetch('ajax/book_back.php', {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json'
+                        },
+                        body: formData
+                    });
+                    const data = await response.json();
+                    if (!response.ok || !data.success) {
+                        alert(data.message);
+                        return;
+                    };
+                    alert("Книга добавлена в корзину!");
+                    $(this).find("span").text(parseInt($(this).find("span").text(), 10)+1);
+                    console.log(data.cart);
+                } catch (error) {
+                    console.error(error);
+                    alert('Ошибка соединения с сервером');
+                }
+            });
         });
     </script>
 </body>
