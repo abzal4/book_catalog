@@ -1,0 +1,526 @@
+:root {
+    --width-base: 1440;
+    --width-current: 100vw;
+    --width-multiplier: calc(var(--width-current) / var(--width-base));
+}
+
+body { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(200, 200, 200);
+    margin: 0;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+ul {
+  padding-left: 0;       
+  margin: 0;             
+}
+
+span {
+  white-space: nowrap;
+}
+
+.books__container, .buy__container , .auth__container, .profile__container, .admin__container, .body__container{
+    width: 65vw;
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: calc(50 * var(--width-multiplier));
+    height: auto;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.admin__container {
+    align-items: center;
+    gap: 10px
+}
+
+.nav__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.buttons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.buttons__right-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+}
+
+.buy__container {
+     align-items: center;
+}
+
+.book__title h3{
+    font-size: calc(48 * var(--width-multiplier));
+    display: flex;
+    align-items: end;
+}
+
+.book__title h3 button{
+    max-height: 20px;
+}
+
+h3 {
+    margin-block: 30px;
+}
+
+.book__info {
+    display: flex;
+    gap: calc(50 * var(--width-multiplier));
+    font-size: 24px;
+}
+
+.book__text {
+    margin-bottom: 20px;
+}
+
+#search_book {
+    width: 40%;
+    padding: 6px;
+}
+
+.formTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.limit {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+#limit {
+    max-height: 20px;
+    max-width: 40px;
+}
+
+.title__search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:30px;
+}
+
+.query__text {
+    background-color: rgba(206, 206, 206, 0.484);
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button__buy {
+    max-width: 100px;
+    right:0;
+}
+#requestForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buy__book-info h3 {
+    margin-block: 0;
+}
+
+.buy__book-info p {
+    margin-block: 10px;
+}
+
+.title__request {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.book__card, .book__card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    max-width:220px;
+    transition: all 0.3s ease-out;
+}
+
+.book__card:hover {
+    background-color: rgb(207, 207, 207);
+}
+
+#result .book_image {
+    height: 250;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.books__container {
+    gap:30px;
+}
+
+.book__container .book_image {
+    object-fit: cover;
+    height: 300px;
+    width: 250px;
+    border: 1px solid black;
+}
+
+.book__title_and_image {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.page__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.right__button, .left__button {
+    max-height: 25px;
+}
+
+.auth__container {
+     align-items: center;
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.header__container {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.user_menu {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile_image {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.profile__container .profile__image {
+    width: 300px;
+    max-height: 600px;
+}
+
+.profile__container {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 30px;
+    width: auto;
+}
+
+.profile__container li {
+    display: flex;
+    gap: 20px;
+}
+
+.profile__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.profile__info-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1000px;
+}
+
+.profile__info-list button {
+    height: 25px;
+}
+
+.short_info .profile_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.short_info .profile_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+
+
+.admin__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    background-color: rgb(227, 227, 227);
+    border-radius: 15px;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    transition:
+        max-height .4s ease,
+        opacity .3s ease;
+}
+
+.admin__section.active {
+    width: 100%;
+    max-height: 5000px;
+    padding: 20px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.admin__section.hidden {
+    padding: 0;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.close_section {
+    position: absolute;
+    right: 15px;
+}
+
+.admin__section h3 {
+    margin-block: 0;
+}
+
+.full_info {
+    display: flex;
+    align-items: center;
+}
+
+#createBookForm {
+    display: flex;
+
+}
+/* 
+.admin__section.active .section__info {
+    max-height: 3000px;
+    opacity: 1;
+}
+
+.genreName, .userLogin, .userPassword, .userName {
+    margin: 0px;
+}
+
+.deleteGenre, .deleteBook, .close_section, .editBook, #searchForm{
+    display: none;
+}
+
+.deleteGenre.active, .deleteBook.active, .close_section.active , .editBook.active, #searchForm.active{
+    display: inline-block;
+} */
+
+.section__info {
+    width: 100%;
+}
+
+.book__info p {
+    display: flex;
+}
+
+.user_change, .short_info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.user_change{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.user_change span{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 10px;
+}
+
+.user_full_info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.section__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    list-style-type: decimal;
+    list-style: decimal;
+    list-style-position: outside;
+}
+
+.full_info {
+    display: flex;
+    gap: 10px;
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+}
+
+.users__section .section__list {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.user_change,
+.short_info {
+    flex-wrap: wrap;
+}
+
+.addUserSection {
+    display: none;
+}
+
+.section__list li {
+    display: flex;
+    gap: 10px;
+}
+
+.button_back {
+    max-width: 100px;
+}
+
+.profile__info button {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.cart_book {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.btn_amount_down , .btn_amount_up {
+    margin-inline: 10px;
+}
+
+.modal {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+
+.modal__container {
+    width: 644px;
+    height: 682px;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+    background-color: white;
+    text-align: center;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orders li, .list_order{
+    display: flex;
+    align-items: flex-start;
+    width: 600px;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.orders {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-back {
+    width: 50px;
+}
