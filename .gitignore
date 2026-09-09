@@ -1,1 +1,7 @@
-2_task/
+/.srv/*
+!/.srv/custom.ini
+/plugins/akismet
+/plugins/hello.php
+/themes/twentytwentythree
+/themes/twentytwentyfour
+/themes/twentytwentyfive

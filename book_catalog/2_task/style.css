@@ -1,0 +1,125 @@
+:root {
+    --width-base: 1440;
+    --width-current: 100vw;
+    --width-multiplier: calc(var(--width-current) / var(--width-base));
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(200, 200, 200);
+}
+
+
+.book__container, .books__container, .buy__container {
+    min-width: 500px;
+    max-width: 700px;
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: calc(50 * var(--width-multiplier));
+    height: auto;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.buy__container {
+     align-items: center;
+}
+
+.book__title{
+    font-size: calc(48 * var(--width-multiplier));
+}
+
+h3 {
+    margin-block: 30px;
+}
+
+.book__info {
+    display: flex;
+    gap: calc(50 * var(--width-multiplier));
+}
+
+.book__text {
+    margin-bottom: 20px;
+}
+
+#search_book {
+    width: 500px;
+    padding: 6px;
+}
+
+.title__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.query__text {
+    background-color: rgba(206, 206, 206, 0.484);
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button__buy {
+    max-width: 100px;
+    right:0;
+}
+#requestForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buy__book-info h3 {
+    margin-block: 0;
+}
+
+.buy__book-info p {
+    margin-block: 10px;
+}
+
+.title__request {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.book__card {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+}
+
+#result .book_image {
+    max-width: 100px;
+}
+
+.book__container, .book_image {
+    max-width: 300px;
+}
+
+.page__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.right__button, .left__button {
+    max-height: 25px;
+}
