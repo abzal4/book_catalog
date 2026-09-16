@@ -1,0 +1,73 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-header/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+.wp-block-blocks-bookcatalog-block-header {
+  width: 100%;
+  background-color: var(--background-default, #FAFAFA);
+  color: var(--text-primary, #0E0D0F);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+}
+.wp-block-blocks-bookcatalog-block-header .inner-header {
+  display: flex;
+  padding: 0 32px;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.wp-block-blocks-bookcatalog-block-header .wp-block-site-logo {
+  width: 200px;
+}
+.wp-block-blocks-bookcatalog-block-header .wp-block-group {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.wp-block-blocks-bookcatalog-block-header .wp-block-navigation {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin: 0;
+}
+.wp-block-blocks-bookcatalog-block-header .wp-block-navigation-item.current-menu-item {
+  color: var(--purple-main);
+}
+.wp-block-blocks-bookcatalog-block-header .right-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.wp-block-blocks-bookcatalog-block-header .header-search:hover, .wp-block-blocks-bookcatalog-block-header .header-mode-switcher:hover, .wp-block-blocks-bookcatalog-block-header .header-cart-link:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .wp-block-navigation__responsive-container.is-menu-open {
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/book_catalog_menu_bg.34507a9b.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white !important;
+  }
+  .wp-block-site-logo {
+    width: 250px !important;
+    z-index: 1001001;
+  }
+  .wp-block-navigation__responsive-container-content {
+    padding-top: 100px !important;
+    padding-inline: 10px !important;
+    font-size: 16px !important;
+  }
+}
+@media (min-width: 600px) {
+  .wp-block-group {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+}
