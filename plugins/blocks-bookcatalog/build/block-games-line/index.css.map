@@ -1,0 +1,1 @@
+{"version":3,"file":"block-games-line/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://blocks-bookcatalog/./src/block-games-line/editor.scss"],"sourcesContent":[".wp-block-create-block-blocks-bookcatalog {\n\tborder: 1px dotted #f00;\n}\n"],"names":[],"sourceRoot":""}

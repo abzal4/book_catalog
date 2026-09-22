@@ -22,6 +22,27 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-games-line' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-bookcatalog/books-line',
+		'version' => '0.1.0',
+		'title' => 'Books Line',
+		'category' => 'book_catalog',
+		'icon' => 'columns',
+		'description' => 'Dynamic Animated Line with Books',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'blocks-bookcatalog',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-header' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -51,7 +72,7 @@ return array(
 		'name' => 'blocks-bookcatalog/block-hero',
 		'version' => '0.1.0',
 		'title' => 'Hero Block',
-		'category' => 'widgets',
+		'category' => 'book_catalog',
 		'icon' => 'smiley',
 		'description' => 'Example block scaffolded with Create Block tool.',
 		'example' => array(
