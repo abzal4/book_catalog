@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+button,
+a {
+	cursor: pointer;
+}
+
+button {
+	border: 0;
+	background: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Styles intended only for the front.*/
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Variables */
+:root {
+	--background-default: #FAFAFA;
+	--action-main: rgba(14,13,15,0.64);
+	--action-main-svg: rgba(14,13,15);
+	--text-primary: #0E0D0F;
+	--purple-main: #6F76C0;
+}
+
+.dark-mode-bookcatalog {
+	--background-default: #0E0D0F;
+	--action-main: rgba(255,255,255,0.64);
+	--action-main-svg: rgba(255,255,255);
+	--text-primary: white;
+}
+
+body {
+	font-family: Roboto;
+	font-style: normal;
+	font-size: 14px ;
+	/* color: var(--text-primary); */
+}
