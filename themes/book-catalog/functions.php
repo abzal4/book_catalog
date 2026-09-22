@@ -3,6 +3,10 @@
 function book_catalog_styles() {
 	wp_enqueue_style( 'book-catalog-general', get_template_directory_uri() . '/assets/css/book-catalog.css', [], wp_get_theme()->get( 'Version' ));
 	wp_enqueue_script( 'book-theme-related', get_template_directory_uri() . '/assets/js/book-catalog-theme-related.js', [], wp_get_theme()->get( 'Version' ));
+
+	//swiper
+	wp_enqueue_style( 'swiper-bundle', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', [], wp_get_theme()->get( 'Version' ));
+	wp_enqueue_script( 'swiper-bundle', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', [], wp_get_theme()->get( 'Version' ));
 }
 add_action( 'wp_enqueue_scripts', 'book_catalog_styles' );
 

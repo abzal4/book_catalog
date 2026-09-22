@@ -44,9 +44,11 @@
 .wp-block-blocks-bookcatalog-block-header .header-search:hover, .wp-block-blocks-bookcatalog-block-header .header-mode-switcher:hover, .wp-block-blocks-bookcatalog-block-header .header-cart-link:hover {
   cursor: pointer;
 }
-
+.wp-block-blocks-bookcatalog-block-header .wp-block-navigation-submenu {
+  z-index: 111111;
+}
 @media (max-width: 600px) {
-  .wp-block-navigation__responsive-container.is-menu-open {
+  .wp-block-blocks-bookcatalog-block-header .wp-block-navigation__responsive-container.is-menu-open {
     background-color: transparent;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/book_catalog_menu_bg.34507a9b.jpg);
     background-size: cover;
@@ -54,18 +56,18 @@
     background-repeat: no-repeat;
     color: white !important;
   }
-  .wp-block-site-logo {
+  .wp-block-blocks-bookcatalog-block-header .wp-block-site-logo {
     width: 250px !important;
     z-index: 1001001;
   }
-  .wp-block-navigation__responsive-container-content {
+  .wp-block-blocks-bookcatalog-block-header .wp-block-navigation__responsive-container-content {
     padding-top: 100px !important;
     padding-inline: 10px !important;
     font-size: 16px !important;
   }
 }
 @media (min-width: 600px) {
-  .wp-block-group {
+  .wp-block-blocks-bookcatalog-block-header .wp-block-group {
     display: flex;
     align-items: center;
     gap: 48px;

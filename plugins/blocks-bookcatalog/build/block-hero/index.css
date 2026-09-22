@@ -1,13 +1,122 @@
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-hero/editor.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-create-block-blocks-bookcatalog {
-  border: 1px dotted #f00;
+:root {
+  --background-default: #FAFAFA;
+  --text-secondary: rgba(14,13,15,0.7);
+  --accent-gradient: linear-gradient(90deg, #3DAFE2 0%, #6F76C0 100%);
+  --white-contrast: #0A090A;
+  --purple-main: #6F76C0;
+  --mask-gradient: linear-gradient(270deg, rgba(14,13,15,0.00) 0%, #ECECEC 79.5%);
+  --mask-gradient-second: linear-gradient(180deg, rgba(250,250,250,0.00) 0%, #fafafa 100%);
+}
+
+.interface-interface-skeleton__body {
+  background-color: var(--background-default);
+}
+
+.is-root-conatainer.is-desktop-preview {
+  overflow: hidden;
+}
+
+.video-bg, .image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 980px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 32px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFF;
+  background: var(--accent-gradient, linear-gradient(90deg, #3DAFE2 0%, #6F76C0 100%));
+}
+.hero-button.shadow {
+  box-shadow: 0px 16px 24px 0px rgba(61, 175, 226, 0.48);
+}
+.hero-button:hover {
+  background: linear-gradient(90deg, #474d91 0%, #474d91 100%);
+  transition: all 0.3s ease-in-out;
+}
+.hero-button:hover.shadow {
+  box-shadow: 0px 8px 12px -6px rgba(61, 175, 226, 0.48);
+}
+
+.hero-slider {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  background: var(--mask-gradient-second);
+}
+.hero-slider .slider_container {
+  width: 100%;
+  max-width: 1540px;
+  overflow: hidden;
+}
+.hero-slider .slider_container .swiper-wrapper {
+  display: flex;
+}
+.hero-slider .slider_container .swiper-slide {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 80px;
+}
+.hero-slider .slider_container .swiper-slide img {
+  display: block;
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+}
+.hero-slider .slider_container .slide-item {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.slide-item-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slide-item-image p {
+  margin-block: 10px !important;
+}
+.slide-item-image .image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px !important;
+  padding: 5px !important;
+  background: rgb(177, 177, 177);
+}
+.slide-item-image .image-box img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map*/

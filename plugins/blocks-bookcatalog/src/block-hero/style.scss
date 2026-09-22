@@ -1,12 +1,153 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+body .is-layout-constrained .wp-block-blocks-bookcatalog-block-hero {
+	width: 100vw !important;
+	height: 980px;
+	max-width: 100vw !important;
+	position: relative;
+	padding: 0 !important;
+}
 
-.wp-block-create-block-blocks-bookcatalog {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.wp-block-blocks-bookcatalog-block-hero {
+	.video-bg, .image-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 980px;
+		object-fit: cover;
+		z-index: 0;
+	}
+
+	.hero-mask {
+		width: 80%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background: var(--mask-gradient);
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 24px;
+		max-width: 1540px;
+		width: 100%;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: var(--wp--style--root--padding-left);
+		padding-right: var(--wp--style--root--padding-right);
+
+		.hero_title {
+			color: var(--white-contrast);
+			max-width: 800px;
+
+			strong {
+				background: var(--accent-gradient, linear-gradient(90deg, #3DAFE2 0%, #6F76C0 100%));
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+
+	.hero-slider {
+		position: absolute;
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 150px;
+		background: var(--mask-gradient-second, linear-gradient(270deg, rgba(250,250,250,0.00) 0%, #fafafa 100%));
+		
+		.slider_container {	
+			width: 100%;
+			max-width: 1540px;
+			overflow: hidden;
+			box-sizing: border-box;
+
+			.swiper-wrapper {
+				display: flex;
+
+				.slide-item {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-right: 100px;
+					max-width: fit-content;
+					margin-left: 0;
+
+					img.dark-logo {
+						display: none;
+					}
+				}
+
+			}
+		}
+	}
+
+	.wrapper {
+		width: 100%;
+		max-width: 1540px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.wp-block-group:empty {
+		display: none;
+	}
+
+	.wp-block-group {
+		display: flex;
+		flex-direction: column !important;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.hero-slider {
+		.swiper-wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.swiper-slide {
+			height: auto;
+			width: 100px;
+		}
+	}
+}
+
+
+.dark-mode-bookcatalog {
+	.wp-block-blocks-bookcatalog-block-hero .hero-slider .slider-container .swiper-wrapper .swiper-slide .slide-item {
+		img.dark-logo {
+			display: block;
+		}
+		img.light-logo {
+			display: none;
+		}
+	}
+}
+
+.wp-block-post-content {
+	padding: 0 !important;
+}
+
+#wp--skip-link--target {
+	padding: 0 !important;
+}
+
+.wp-block-post-title {
+	display: none;
 }
