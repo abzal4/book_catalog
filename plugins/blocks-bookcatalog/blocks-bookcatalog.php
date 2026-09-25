@@ -26,9 +26,16 @@ add_filter('block_categories_all', function($categories){
 	]);
 });
 
+define ( 'BLOCKS_BOOKCATALOG_PATH', plugin_dir_path( __FILE__ ) );
+
+require_once( BLOCKS_BOOKCATALOG_PATH . 'blocks.php' );
+
 function create_block_blocks_bookcatalog_block_init() {
 	register_block_type( __DIR__ . '/build/block-header');
 	register_block_type( __DIR__ . '/build/block-hero');
+	register_block_type( __DIR__ . '/build/block-games-line', array(
+		'render_callback' => 'view_blocks_game_line'
+	) );
 	// wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
 }
 add_action( 'init', 'create_block_blocks_bookcatalog_block_init' );

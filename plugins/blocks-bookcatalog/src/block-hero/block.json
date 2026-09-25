@@ -4,7 +4,7 @@
 	"name": "blocks-bookcatalog/block-hero",
 	"version": "0.1.0",
 	"title": "Hero Block",
-	"category": "widgets",
+	"category": "book_catalog",
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},

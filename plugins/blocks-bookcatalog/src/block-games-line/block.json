@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-bookcatalog/books-line",
+	"version": "0.1.0",
+	"title": "Books Line",
+	"category": "book_catalog",
+	"icon": "columns",
+	"description": "Dynamic Animated Line with Books",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"count": {
+			"type": "number",
+			"default": 12
+		}
+	},
+	"textdomain": "blocks-bookcatalog",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

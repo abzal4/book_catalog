@@ -1,8 +1,9 @@
 body .is-layout-constrained .wp-block-blocks-bookcatalog-block-hero {
-	width: 100vw !important;
+	position: relative;
+	width: 100% !important;
 	height: 980px;
 	max-width: 100vw !important;
-	position: relative;
+	overflow: hidden;
 	padding: 0 !important;
 }
 
