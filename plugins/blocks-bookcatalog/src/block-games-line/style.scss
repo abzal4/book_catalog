@@ -1,0 +1,29 @@
+.wp-block-blocks-bookcatalog-books-line {
+    max-width: 100% !important;
+
+    .bookscatalog-line-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        transition: transform 3.5s linear;
+        transition-timing-function: linear;
+    }
+
+    .book-item {
+        width: 267px !important;
+        height: 403px !important;
+        position: relative;
+        border-radius: 8px;
+        margin-inline: 4px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,14 +1,26 @@
 
 import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl } from '@wordpress/components';
 import './editor.scss';
-export default function Edit() {
+import placeholder from "./img/default.png";
+
+export default function Edit({ attributes, setAttributes }) {
+	const { count } = attributes;
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Blocks Book Catalog – hello from the editor!',
-				'blocks-bookcatalog'
-			) }
-		</p>
+		<>
+			<InspectorControls>
+				<PanelBody title={ __( 'Settings', 'blocks-bookcatalog' ) }>
+					<TextControl 
+						label = { __( 'Count', 'blocks-bookcatalog' ) }
+						value={ count }
+						onChange={ ( val ) => setAttributes( { count: parseInt(val,10) || 0 } )}
+					/>
+				</PanelBody>
+			</InspectorControls>
+			<p { ...useBlockProps() }>
+				<img src={placeholder} />
+			</p>
+		</>
 	);
 }
