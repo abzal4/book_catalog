@@ -65,3 +65,90 @@ function book_catalog_add_svg_to_image_types( $types ) {
 	return $types;
 }
 add_filter( 'image_editor_output_format', 'book_catalog_add_svg_to_image_types' );
+
+function register_book_news_post_type() {
+
+	register_post_type( 'book_news', array(
+		'labels' => array(
+			'name'               => 'Новости',
+			'singular_name'      => 'Новость',
+            'name_admin_bar'     => 'Новости',
+			'menu_name'          => 'Новости',
+			'archives'           => 'Архивы',
+			'attributes'         => 'Атрибуты',
+			'add_new'            => 'Добавить новость',
+			'add_new_item'       => 'Добавить новость',
+			'parent_item_colon'  => 'Parent новости',
+			'edit_item'          => 'Редактировать новость',
+			'new_item'           => 'Новая новость',
+			'view_item'          => 'Просмотреть новость',
+			'search_items'       => 'Поиск новостей',
+			'not_found'          => 'Новости не найдены',
+			'not_found_in_trash' => 'Новостей в корзине нет',
+			'all_items'          => 'Все новости',
+		)
+        
+        ,
+
+		'public'       => true,
+		'show_ui'      => true,
+		'show_in_menu' => true,
+        'show_in_rest' => true,
+
+		'menu_icon'    => 'dashicons-megaphone',
+		'menu_position' => 5,
+
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail',
+			'excerpt',
+			'revisions',
+		),
+
+		'has_archive' => true,
+
+		'rewrite' => array(
+			'slug' => 'news',
+		),
+
+		'show_in_rest' => true,
+	) );
+}
+
+add_action( 'init', 'register_book_news_post_type' );
+
+
+/**
+ * Регистрация таксономии "Категория новостей"
+ */
+function register_book_news_category_taxonomy() {
+
+	register_taxonomy( 'news_category', array( 'book_news' ), array(
+
+		'labels' => array(
+			'name'              => 'Категории новостей',
+			'singular_name'     => 'Категория новостей',
+			'menu_name'         => 'Категории',
+			'all_items'         => 'Все категории',
+			'edit_item'         => 'Редактировать категорию',
+			'update_item'       => 'Обновить категорию',
+			'add_new_item'      => 'Добавить категорию',
+			'new_item_name'     => 'Название новой категории',
+			'search_items'      => 'Поиск категорий',
+			'not_found'         => 'Категории не найдены',
+		),
+
+		'public'       => true,
+		'show_ui'      => true,
+		'show_in_rest' => true,
+
+		'hierarchical' => true,
+
+		'rewrite' => array(
+			'slug' => 'news-category',
+		),
+	) );
+}
+
+add_action( 'init', 'register_book_news_category_taxonomy' );

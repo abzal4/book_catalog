@@ -1,0 +1,30 @@
+:root {
+	--background-default: #FAFAFA;
+	--background-80: rgba(250, 250, 250, 0.8);
+	--action-main: rgba(14,13,15,0.64);
+	--action-main-svg: rgba(14,13,15);
+	--text-primary: #0E0D0F;
+	--text-secondary: rgba(14,13,15,0.7);
+	--accent-gradient: linear-gradient(90deg, #3DAFE2 0%, #6F76C0 100%);
+	--secondary-48: rgba(250, 250, 250, 0.48);
+	--white-contrast: #0A090A;
+	--purple-main: #6F76C0;
+	--wp--preset--color--base: #FAFAFA;
+	--mask-gradient: linear-gradient(270deg, rgba(14,13,15,0.00) 0%, #ECECEC 79.5%);
+	--mask-gradient-second: linear-gradient(180deg, rgba(250,250,250,0.00) 0%, #fafafa 100%);
+}
+
+.dark-mode-bookcatalog {
+	--background-default: #0E0D0F;
+	--background-80: rgba(14, 15, 15, 0.8);
+	--action-main: rgba(255,255,255,0.64);
+	--action-main-svg: rgba(255,255,255);
+	--text-primary: white;
+	--text-secondary: rgba(255,255,255,0.7);
+	--secondary-48: rgba(14, 13, 15, 0.6);
+	--white-contrast: #FFFFFF;
+	--wp--preset--color--base: #0E0D0F;
+	--wp--preset--color--contrast: #FFFFFF;
+	--mask-gradient: linear-gradient(270deg, rgba(14,13,15,0.00) 0%, #0D0B0F 79.5%);
+	--mask-gradient-second: linear-gradient(180deg, rgba(14,13,15,0.00) 0%, #0e0d0f 100%);
+}
