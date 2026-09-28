@@ -32,3 +32,14 @@ function book_catalog_google_font_script(){
 }
 
 add_action('wp_enqueue_scripts', 'book_catalog_google_font_script');
+
+
+//Load assets to Gutenberg
+function bookcatalog_gutenberg_styles () {
+	wp_enqueue_style('book-catalog-google-font', book_catalog_google_font(),[],'1.0.0');
+
+	
+	//wp_enqueue_style( 'book-catalog-editor-style', get_template_directory_uri() . '/assets/css/editor-style.css', ['book-catalog-google-font'], wp_get_theme()->get( 'Version' ));
+	add_editor_style('/assets/css/editor-style.css');
+}
+add_action('enqueue_block_editor_assets', 'bookcatalog_gutenberg_styles');
